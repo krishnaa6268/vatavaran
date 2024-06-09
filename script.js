@@ -40,9 +40,47 @@ submit.addEventListener("click", (e)=>{
   e.preventDefault()
   getWeather(city.value)
 })
+
+
+
+
+
+
+
+
+//Alternative Code:
+
+/* 
+async function funcApi()
+{
+  const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '3d38b6fd0dmsh30999b94460f4dcp1c5d11jsn74a2d27c747d',
+		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+	}
+};
+let result;
+try {
+	const response = await fetch(url, options);
+	 result = await response.text();
+	console.log(result);
+
+} catch (error) {
+	console.error(error);
+}
+return result
+}
+console.log(funcApi());
+
+
  
 getWeather("delhi")
 
 document.querySelector("#citi").addEventListener('click',(e)=>{
 getWeather(String(e.target.innerHTML));
 },true)
+
+
+*/
