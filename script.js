@@ -42,8 +42,11 @@ submit.addEventListener("click", (e)=>{
 })
 
 
+getWeather("delhi")
 
-
+document.querySelector("#citi").addEventListener('click',(e)=>{
+getWeather(String(e.target.innerHTML));
+},true)
 
 
 
@@ -73,14 +76,5 @@ try {
 return result
 }
 console.log(funcApi());
-
-
- 
-getWeather("delhi")
-
-document.querySelector("#citi").addEventListener('click',(e)=>{
-getWeather(String(e.target.innerHTML));
-},true)
-
 
 */
